@@ -3,6 +3,7 @@ import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-100">
@@ -51,16 +52,17 @@ const Footer: React.FC = () => {
 
           {/* Discover Links */}
           <div className="flex flex-col items-center">
-            <h3 className="font-playfair text-lg font-medium text-gray-800 mb-4">
-              Discover
-            </h3>
-            <ul className="space-y-3 text-center">
-              <li><a href="/men" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">For Him</a></li>
-              <li><a href="/women" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">For Her</a></li>
-              <li><a href="/collection" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">Full Collection</a></li>
-              <li><a href="#" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">About Us</a></li>
-            </ul>
-          </div>
+  <h3 className="font-playfair text-lg font-medium text-gray-800 mb-4">
+    Discover
+  </h3>
+  <ul className="space-y-3 text-center">
+    <li><Link to="/men" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">For Him</Link></li>
+    <li><Link to="/women" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">For Her</Link></li>
+    <li><Link to="/collection" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">Full Collection</Link></li>
+    <li><Link to="/about" className="font-garamond text-gray-600 hover:text-peach-500 transition-colors">About Us</Link></li>
+  </ul>
+</div>
+
 
           {/* Social + Newsletter */}
           <div className="flex flex-col items-center md:items-end">

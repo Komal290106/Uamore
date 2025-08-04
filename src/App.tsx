@@ -11,10 +11,11 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Men from './pages/Men';
 import Women from './pages/Women';
-// import Footer from './components/UI/Footer'; // ✅ corrected path
 import Footer from './components/Layout/Footer';
+import ScrollToTop from './components/ScrollToTop'; // ✅ path assumed
+import AboutUs from './pages/AboutUs'; 
 
-
+// 🧠 Wrap children with layout visibility logic
 function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const hideLayout = ['/login', '/signup'].includes(location.pathname);
@@ -28,11 +29,13 @@ function LayoutWrapper({ children }: { children: React.ReactNode }) {
   );
 }
 
+// 🌐 Main App
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <Router>
+          <ScrollToTop /> {/* 🔥 Always scrolls to top on route change */}
           <LayoutWrapper>
             <Routes>
               <Route path="/" element={<Homepage />} />
@@ -43,6 +46,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/about" element={<AboutUs />} />
             </Routes>
           </LayoutWrapper>
         </Router>

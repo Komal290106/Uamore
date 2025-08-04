@@ -4,7 +4,7 @@ import SparkleAnimation from '../UI/SparkleAnimation';
 import perfumeImage from '../perfume.jpg';
 import flowerImage from '../flower.jpeg';
 import orangeImage from '../orange.jpeg';
-
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -49,12 +49,12 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mb-12"
             >
-              <a
-                href="/collection"
-                className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-peach-300 to-blush-300 text-white text-lg font-semibold shadow-md hover:from-peach-400 hover:to-blush-400 transition-all duration-300"
-              >
-                Explore Collection
-              </a>
+              <Link
+  to="/collection"
+  className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-peach-300 to-blush-300 text-white text-lg font-semibold shadow-md hover:from-peach-400 hover:to-blush-400 transition-all duration-300"
+>
+  Explore Collection
+</Link>
             </motion.div>
 
             <motion.div
