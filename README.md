@@ -11,7 +11,7 @@ Because smelling good should look good too.
 🔗 uamore-phi.vercel.app
 
 ## Tech Stack
-Frontend: HTML, Tailwind CSS, JavaScript
+Frontend: React, Tailwind CSS, TypeScript
 
 Animations: Framer Motion (for smooth transitions & visual delight)
 
